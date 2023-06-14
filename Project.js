@@ -88,6 +88,7 @@ const spin = () => {
     return reels;
 };
 
+//Making the transpoe to return the no. of rows.
 const transpose = (reels) => {
     const rows = [];
     for(let i = 0; i < ROWS; i++){
@@ -99,6 +100,8 @@ const transpose = (reels) => {
     return rows;
 };
 
+
+//Printing the symbols in a row
 const printRows = (rows) => {
     for(const row of rows){
         let rowString = "";
@@ -112,6 +115,8 @@ const printRows = (rows) => {
     }
 };
 
+
+//Giving the PLayers their winning if they won any
 const getWinnings = (rows, bet, lines) => {
     let winnings = 0;
     for(let row = 0; row < lines; row++){
@@ -133,6 +138,8 @@ const getWinnings = (rows, bet, lines) => {
     return winnings;
 };
 
+
+//Making the balance function to update after every game, and providing a play again option
 const game = () => {
     let balance = deposit();
 
@@ -157,12 +164,7 @@ const game = () => {
 
         if(playAgain != "y")break;
     }
-
-
-    
-        
-    
-    
 }
 
 game();
+//Slot-Machine completed
